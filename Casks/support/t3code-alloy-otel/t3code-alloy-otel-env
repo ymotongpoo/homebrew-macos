@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+/bin/launchctl setenv T3CODE_OTLP_TRACES_URL http://127.0.0.1:4318/v1/traces
+/bin/launchctl setenv T3CODE_OTLP_METRICS_URL http://127.0.0.1:4318/v1/metrics
+/bin/launchctl setenv T3CODE_OTLP_LOGS_URL http://127.0.0.1:4318/v1/logs
+/bin/launchctl setenv T3CODE_OTLP_PROTOCOL http/json

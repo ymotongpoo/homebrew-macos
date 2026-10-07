@@ -1,0 +1,9 @@
+.DS_Store
+*.swp
+*.tmp
+.env
+.env.*
+*.token
+*.secret
+*.credential
+*.credentials
