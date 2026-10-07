@@ -2,17 +2,20 @@
 set -eu
 
 version="${1:?usage: scripts/package-cask.sh VERSION}"
-case "$version" in
-  *[!0-9.]*|'')
+case "${version}" in
+  *[!0-9.]* | '')
     printf 'version must contain only digits and dots\n' >&2
     exit 2
     ;;
+  *)
+    :
+    ;;
 esac
-script_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
-repo_root="$(CDPATH= cd -- "$script_dir/.." && pwd)"
+script_dir="$(CDPATH='' cd -- "$(dirname -- "${0}")" && pwd)"
+repo_root="$(CDPATH='' cd -- "${script_dir}/.." && pwd)"
 output="${TMPDIR:-/tmp}/t3code-alloy-otel-${version}.tar.gz"
 
-python3 - "$repo_root" "$output" <<'PY'
+python3 - "${repo_root}" "${output}" <<'PY'
 import gzip
 import pathlib
 import sys
