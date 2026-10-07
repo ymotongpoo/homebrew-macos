@@ -16,7 +16,7 @@ cask "t3code-alloy-otel" do
   postflight_steps do
     on_macos do
       run "/bin/sh",
-          args: [
+          args:           [
             "-c",
             <<~SH,
               set -eu
