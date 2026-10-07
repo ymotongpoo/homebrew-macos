@@ -1,5 +1,5 @@
 cask "t3code-alloy-otel" do
-  version "0.1.0"
+  version "0.1.1"
   sha256 "f1671ce0eb0b5dfdccdc84cf9c4b2cf432a35dd059ee31a6d7b2fc495388e6c7"
 
   url "https://github.com/ymotongpoo/homebrew-t3code/releases/download/t3code-alloy-otel-#{version}/t3code-alloy-otel-#{version}.tar.gz"
@@ -25,7 +25,7 @@ cask "t3code-alloy-otel" do
                     must_succeed: true
     system_command "/usr/bin/xattr",
                     args: ["-d", "com.apple.quarantine", plist],
-                    must_succeed: true
+                    print_stderr: false
     system_command "/bin/launchctl",
                     args: ["bootstrap", "gui/#{Process.uid}", plist],
                     must_succeed: true
