@@ -1,5 +1,5 @@
 cask "t3code-alloy-otel" do
-  version "0.1.2"
+  version "0.1.3"
   sha256 "f1671ce0eb0b5dfdccdc84cf9c4b2cf432a35dd059ee31a6d7b2fc495388e6c7"
 
   url "https://github.com/ymotongpoo/homebrew-t3code/releases/download/t3code-alloy-otel-#{version}/t3code-alloy-otel-#{version}.tar.gz"
@@ -29,7 +29,7 @@ cask "t3code-alloy-otel" do
       fi
     SH
     system_command "/bin/sh",
-                    args: ["-c", remove_quarantine, "sh", plist],
+                    args: ["-c", remove_quarantine, "sh", plist]
     system_command "/bin/launchctl",
                     args: ["bootstrap", "gui/#{Process.uid}", plist],
                     must_succeed: true

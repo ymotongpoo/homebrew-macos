@@ -22,11 +22,11 @@ Uninstall stops and removes the LaunchAgent, removes the helper command, and cle
 ## Publish a cask version
 
 ```sh
-asset="$(scripts/package-cask.sh 0.1.2)"
+asset="$(scripts/package-cask.sh 0.1.3)"
 shasum -a 256 "$asset"
-gh release create t3code-alloy-otel-0.1.2 \
+gh release create t3code-alloy-otel-0.1.3 \
   "$asset" \
-  --title "t3code-alloy-otel 0.1.2"
+  --title "t3code-alloy-otel 0.1.3"
 ```
 
-The script writes a deterministic archive under the system temporary directory. Before publishing a new release, update the cask version and SHA-256 to match the archive. Replace `0.1.2` in the commands with the new version.
+The script writes a deterministic archive under the system temporary directory. Before publishing a new release, update the cask version and SHA-256 to match the archive. Replace `0.1.3` in the commands with the new version.
