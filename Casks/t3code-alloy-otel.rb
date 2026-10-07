@@ -2,7 +2,7 @@ cask "t3code-alloy-otel" do
   version "0.1.3"
   sha256 "f1671ce0eb0b5dfdccdc84cf9c4b2cf432a35dd059ee31a6d7b2fc495388e6c7"
 
-  url "https://github.com/ymotongpoo/homebrew-t3code/releases/download/t3code-alloy-otel-#{version}/t3code-alloy-otel-#{version}.tar.gz"
+  url "https://github.com/ymotongpoo/homebrew-macos/releases/download/t3code-alloy-otel-#{version}/t3code-alloy-otel-#{version}.tar.gz"
   name "T3 Code Alloy OTLP Environment"
   desc "Configure T3 Code to export OTLP telemetry through local Grafana Alloy"
   homepage "https://github.com/pingdotgg/t3code"

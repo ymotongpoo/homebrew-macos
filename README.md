@@ -1,11 +1,13 @@
-# T3 Code Alloy OTLP Homebrew tap
+# macOS Homebrew tap
 
-This tap configures T3 Code to export OTLP traces, metrics, and logs to a local Grafana Alloy receiver at `127.0.0.1:4318`.
+This tap contains macOS Casks, including the T3 Code Alloy OTLP integration.
+
+The `t3code-alloy-otel` cask configures T3 Code to export OTLP traces, metrics, and logs to a local Grafana Alloy receiver at `127.0.0.1:4318`.
 
 ## Install
 
 ```sh
-brew tap <github-owner>/t3code
+brew tap <github-owner>/macos
 brew install --cask t3code-alloy-otel
 ```
 
