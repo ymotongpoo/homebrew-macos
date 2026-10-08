@@ -1,8 +1,8 @@
 class ActivitylogAgent < Formula
   desc "Send desktop activity to Grafana Cloud over OTLP"
   homepage "https://github.com/ymotongpoo/activitylog"
-  url "https://github.com/ymotongpoo/activitylog/releases/download/v0.2.1/activitylog-agent-0.2.1-darwin-arm64.tar.gz"
-  sha256 "a802eeaebfd752b852f990c6694caa3f78a28194e4059aaab8732339df686ad8"
+  url "https://github.com/ymotongpoo/activitylog/releases/download/v0.3.1/activitylog-agent-0.3.1-darwin-arm64.tar.gz"
+  sha256 "cb3b6024d51a8c0b44bae5dad8620b649e17fc71b613bd73630c714b3f5f8ee5"
   license "Apache-2.0"
 
   livecheck do
@@ -19,11 +19,11 @@ class ActivitylogAgent < Formula
 
   def caveats
     <<~EOS
-      Write a configuration, then start the agent:
+      The agent sends OTLP to http://localhost:4318, the default receiver of a
+      local Grafana Alloy or OpenTelemetry Collector. To change it, write a
+      configuration first:
         mkdir -p ~/Library/Application\\ Support/activitylog
         activitylog-agent example-config > ~/Library/Application\\ Support/activitylog/config.yaml
-        # edit otlp.endpoint, otlp.instance_id and the token
-        brew services start activitylog-agent
 
       Grant Accessibility (and Automation for browsers without the extension)
       to activitylog-agent in System Settings > Privacy & Security. The binary
