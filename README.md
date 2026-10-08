@@ -1,6 +1,6 @@
 # macOS Homebrew tap
 
-This tap contains macOS Casks, including the T3 Code Alloy OTLP integration and the [activitylog](https://github.com/ymotongpoo/activitylog) agent.
+This tap contains macOS Casks and formulae, including the T3 Code Alloy OTLP integration and the [activitylog](https://github.com/ymotongpoo/activitylog) agent.
 
 The `t3code-alloy-otel` cask configures T3 Code to export OTLP traces, metrics, and logs to a local Grafana Alloy receiver at `127.0.0.1:4318`.
 
@@ -16,10 +16,11 @@ Fully quit and reopen T3 Code after installation so it inherits the OTLP environ
 ### activitylog-agent
 
 ```sh
-brew install --cask activitylog-agent
+brew install activitylog-agent
+brew services start activitylog-agent
 ```
 
-`activitylog-agent` collects desktop activity (foreground app, window title, AFK, browser tab, editor file, shell commands) and sends it to Grafana Cloud over OTLP. Follow the caveats printed after installation to write a configuration and run `activitylog-agent service install`. See the [activitylog README](https://github.com/ymotongpoo/activitylog) for details.
+`activitylog-agent` is a background daemon that collects desktop activity (foreground app, window title, AFK, browser tab, editor file, shell commands) and sends it to Grafana Cloud over OTLP. Write a configuration as shown in the caveats before starting the service. See the [activitylog README](https://github.com/ymotongpoo/activitylog) for details.
 
 ## Uninstall
 
