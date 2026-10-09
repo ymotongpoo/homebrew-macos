@@ -1,8 +1,8 @@
 class ActivitylogAgent < Formula
   desc "Send desktop activity to Grafana Cloud over OTLP"
   homepage "https://github.com/ymotongpoo/activitylog"
-  url "https://github.com/ymotongpoo/activitylog/releases/download/v0.3.1/activitylog-agent-0.3.1-darwin-arm64.tar.gz"
-  sha256 "cb3b6024d51a8c0b44bae5dad8620b649e17fc71b613bd73630c714b3f5f8ee5"
+  url "https://github.com/ymotongpoo/activitylog/releases/download/v0.6.2/activitylog-agent-0.6.2-darwin-arm64.tar.gz"
+  sha256 "b7c83d7520aa24cc840688f175714f56c82da6fd28515195d0314edd12e79454"
   license "Apache-2.0"
 
   livecheck do
