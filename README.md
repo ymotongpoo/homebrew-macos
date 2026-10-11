@@ -7,11 +7,14 @@ Personal Homebrew tap for macOS applications and utilities.
 - macOS
 - [Homebrew](https://brew.sh/)
 
-## Add the tap
+## Add and trust the tap
 
 ```sh
 brew tap ymotongpoo/macos
+brew trust ymotongpoo/macos
 ```
+
+`brew trust` allows Homebrew to load all formulae, casks, and external commands in this tap. See [Homebrew's Tap Trust documentation](https://docs.brew.sh/Tap-Trust) for details.
 
 ## Package documentation
 
